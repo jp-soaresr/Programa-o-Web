@@ -14,19 +14,3 @@
 <div class="container my-4"></div>
     @yield('conteudo')
 
-<div class="form-container">
-    <h3 class="text-center">Calculadora</h3>
-    <form id="form-calculo">
-        <div class="mb-3">
-            <label for="numero1" class="form-label">Número 1</label>
-            <input type="number" class="form-control" id="numero1" required>
-        </div>
-        <div class="mb-3">
-            <label for="numero2" class="form-label">Número 2</label>
-            <input type="number" class="form-control" id="numero2" required>
-        </div>
-        <button type="button" class="btn btn-primary w-100" onclick="calcular()">Calcular</button>
-    </form>
-    <div id="resultado" class="mt-3"></div>
-</div>
-</body>
