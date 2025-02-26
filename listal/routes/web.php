@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use app\Http\Controllers\ExerciciosCntro;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -31,18 +32,9 @@ Route::post('/exer1resp', function (Request $request) {
 });
 
 
-Route::get('ex1', function () {
-    return view('lista.ex1');
-});
+Route::get('ex1', [ExerciciosCntro::class, 'abrirFormulario1']);
 
-Route::post('/listaex1', function (Request $request) {
-    $nota1 = floatval($request->input('nota1'));
-    $nota2 = floatval($request->input('nota2'));
-    $nota3 = floatval($request->input('nota3'));
-
-    $media = (($nota1 + $nota2 + $nota3) / 3);
-    return view('lista.ex1', compact('media'));
-});
+Route::post('/listaex1', [ExerciciosCntro::class, 'respostaExcer1']);
 
 
 
