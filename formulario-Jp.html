@@ -1,0 +1,386 @@
+<script>
+    const html = document.querySelector("html");
+    html.style.overflow = "hidden";
+  </script>
+  <iframe style="height: 100vh !important; width: 100% !important; overflow: hidden; border: none"
+  srcdoc="
+
+<!DOCTYPE html>
+<html lang='pt-BR' data-theme='light'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Formulario</title>
+    <link rel='stylesheet' href='/src/css/style.css'>
+    <script src='https://unpkg.com/imask'></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css'>
+    <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
+</head>
+<style>
+    .is-border-danger {
+        border: 1px solid #ff335c !important;
+        border-radius: 5px;
+        
+    }
+    .img-size1 {
+        width: 200px;
+        height: auto;
+        
+    }
+    .img-size2 {
+        width: 200px;
+        height: auto;
+        padding-left: 8%;
+        
+        
+       
+    }
+    .cabecalho {
+        background-color: #F7F7F7;
+        margin-bottom: 2%;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    
+    }
+
+    .title-custom {
+
+        text-align: center;
+        color: rgb(36, 35, 79);
+        text-align: center;
+        font-size: 26px;
+        
+    }
+
+    /* Mobile (até 768px) */
+    @media screen and (max-width: 768px) {
+        .box {
+            width: 90%;
+        }
+    }
+
+    /* Tablet (de 769px a 1023px) */
+    @media screen and (min-width: 769px) and (max-width: 1023px) {
+        .box {
+            width: 80%;
+        }
+    }
+
+    /* Desktop (de 1024px a 1215px) */
+    @media screen and (min-width: 1024px) and (max-width: 1215px) {
+        .box {
+            width: 70%;
+        }
+    }
+
+    /* Widescreen (a partir de 1216px) */
+    @media screen and (min-width: 1216px) {
+        .box {
+            width: 60%;
+        }
+    }
+</style>
+
+<body class='py-4 has-background-white-ter is-flex is-justify-content-center'>
+
+    <div class='box '>
+        <div class=&quot;column cabecalho&quot;>
+
+            <div class=&quot;is-flex is-justify-content-center gap-6&quot;>
+                <div>
+                    <img class=&quot;img-size1&quot; src=&quot;https://ss-usa.s3.amazonaws.com/companies/MzY0Mje0MDY2AwA/uploads/logo-creator.jpg&quot;
+                         alt=&quot;Logo da Multimídia Editora&quot;>
+                </div>
+            
+                <div>
+                    <img class=&quot;img-size2&quot; src=&quot;https://ss-usa.s3.amazonaws.com/companies/MzY0Mje0MDY2AwA/uploads/logo_multimidia.jpg&quot;
+                         alt=&quot;Logo da Multimídia Editora&quot;>
+                </div>
+            </div>
+
+        </div>
+
+
+        <main class='container is-max-desktop'>
+            <h1 class='title-custom pb-5 '>Parabéns, você concluiu a aula! 🎉 </h1>
+            <p class=' is-size-5 pb-5'>Quer receber mais conteúdos como esse? Preencha seus dados abaixo e fique por
+                dentro das novidades! 😉 </p>
+            <form action='#' id='formulario-cep' method='POST' aria-labelledby='formulario-cep'
+                class='columns is-multiline'>
+                <div class='column is-12'>
+                    <label class='label is-size-5' for='nome-completo'>Nome Completo<span
+                            class='has-text-danger'>*</span></label>
+                    <div class='control is-expanded'>
+                        <input class='input is-uppercase' maxlength='100' type='text' name='nome-completo'
+                            id='nome-completo' autofocus required aria-label='Nome completo'>
+                    </div>
+                </div>
+
+                <div class='column is-12'>
+                    <label class='label is-size-5' for='email'>E-mail <span class='has-text-danger'>*</span></label>
+                    <div class='control is-expanded'>
+                        <input class='input' type='email' name='email' id='email' required aria-label='E-mail'>
+                    </div>
+                </div>
+
+                <div class='column is-12'>
+                    <label class='label is-size-5' for='whatsapp'>WhatsApp <span
+                            class='has-text-danger'>*</span></label>
+                    <div class='control is-expanded'>
+                        <input class='input' type='text' name='whatsapp' id='whatsapp' required aria-label='WhatsApp'>
+                    </div>
+                </div>
+
+                <div class='column is-12'>
+                    <label class='label is-size-5' for='profissao'>Profissão <span
+                            class='has-text-danger'>*</span></label>
+                    <div class='control is-expanded'>
+                        <input class='input is-uppercase' type='text' maxlength='100' name='profissao' id='profissao'
+                            required aria-label='Profissão '>
+                    </div>
+                </div>
+
+
+
+                <div class='column is-6-widescreen is-6-desktop is-6-tablet is-12-mobile'>
+                    <label class='label is-size-5' for='estado'>Estado <span class='has-text-danger'>*</span></label>
+                    <div class='control'>
+                        <div class='select is-fullwidth'>
+                            <select name='estado' id='estado' required aria-label='Selecione o estado'>
+                                <option value='' selected>Selecione</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='column is-6-widescreen is-6-desktop is-6-tablet is-12-mobile'>
+                    <label class='label is-size-5' for='cidade'>Cidade <span class='has-text-danger'>*</span></label>
+                    <div class='control'>
+                        <div class='select is-fullwidth'>
+                            <select name='cidade' id='cidade' required aria-label='Selecione a cidade'>
+                                <option value=''>Selecione</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='column mt-4 is-12'>
+                    <button id='btn-enviar' type='submit'
+                        class='column is-12 is-12-mobile is-link button is-size-4 has-text-white'
+                        aria-label='Enviar formulário'>
+                        Enviar
+                    </button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <script type='text/javascript'>
+        var __ss_noform = __ss_noform || [];
+        __ss_noform.push(['baseURI', 'https://app-3SI74COZ2S.marketingautomation.services/webforms/receivePostback/MzY0Mje0MDY2AwA/']);
+        __ss_noform.push(['endpoint', 'd5c382e1-c615-4d4e-9c13-5b5b2c453163']);
+    </script>
+    <script type='text/javascript'
+        src='https://koi-3SI74COZ2S.marketingautomation.services/client/noform.js?ver=1.24'></script>
+    <script>
+        const selectEstado = document.getElementById('estado');
+        const selectCidade = document.getElementById('cidade');
+        const inputEmail = document.getElementById('email');
+        const inputNome = document.getElementById('nome-completo');
+        const inputProfissao = document.getElementById('profissao');
+        const inputWhatsapp = document.getElementById('whatsapp');
+        const btn = document.getElementById('btn-enviar');
+        const formulario = document.getElementById('formulario-cep');
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            try {
+                mascarasEValidacoes();
+                eventoEnviarFormulario();
+                await main()
+            } catch (error) {
+                console.error('Houve um erro: ', error);
+            }
+        });
+
+
+        async function main() {
+            await adicionarEventoMudancaEstado();
+            await criaEstados();
+            await criaCidades();
+        }
+
+        function eventoEnviarFormulario() {
+            btn.addEventListener('click', async (e) => {
+                e.preventDefault();
+                if (!formulario.checkValidity()) {
+                    formulario.reportValidity();
+                }
+                if (!verificaCamposObrigatorios()) {
+                    return;
+                }
+                const eventoSubmit = new Event('submit', {
+                    bubbles: true,
+                    cancelable: true,
+                });
+                formulario.dispatchEvent(eventoSubmit);
+            });
+        }
+
+        function verificaCamposObrigatorios() {
+
+            const campos = [
+                inputEmail,
+                inputNome,
+                inputProfissao,
+                inputWhatsapp,
+                selectEstado,
+                selectCidade,
+            ];
+            for (const campo of campos) {
+                if (campo.value.trim() === '') {
+                    campo.classList.add('is-danger');
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function mascarasEValidacoes() {
+
+            inputEmail.addEventListener('input', () => {
+                if (inputEmail.validity.valid) {
+                    inputEmail.classList.remove('is-danger');
+                    inputEmail.classList.add('is-success');
+                } else {
+                    inputEmail.classList.remove('is-success');
+                    inputEmail.classList.add('is-danger');
+                }
+            });
+
+            const whatsappMask = IMask(inputWhatsapp, {
+                mask: '(00) 00000-0000'
+            });
+            inputWhatsapp.addEventListener('input', () => {
+                if (whatsappMask.masked.isComplete) {
+                    inputWhatsapp.classList.remove('is-danger');
+                    inputWhatsapp.classList.add('is-success');
+                } else {
+                    inputWhatsapp.classList.remove('is-success');
+                    inputWhatsapp.classList.add('is-danger');
+                }
+            });
+
+            inputProfissao.addEventListener('input', () => {
+                const value = inputProfissao.value.trim();
+                const wordCount = value.split(/\s+/).filter(Boolean).length;
+                if (wordCount >= 1 && value.length <= 100) {
+                    inputProfissao.classList.remove('is-danger');
+                    inputProfissao.classList.add('is-success');
+                } else {
+                    inputProfissao.classList.remove('is-success');
+                    inputProfissao.classList.add('is-danger');
+                }
+            });
+
+            inputNome.addEventListener('input', () => {
+                const value = inputNome.value.trim();
+                const wordCount = value.split(/\s+/).filter(Boolean).length;
+                if (wordCount >= 2 && value.length <= 100) {
+                    inputNome.classList.remove('is-danger');
+                    inputNome.classList.add('is-success');
+                } else {
+                    inputNome.classList.remove('is-success');
+                    inputNome.classList.add('is-danger');
+                }
+            });
+        }
+
+        async function adicionarEventoMudancaEstado() {
+            selectEstado.addEventListener('change', async (e) => {
+                e.preventDefault();
+                await criaCidades();
+            });
+        }
+
+        async function criaEstados() {
+            selectEstado.innerHTML = '';
+            try {
+                const estados = await apiEstados();
+                if (estados) {
+                    estados.forEach(e => {
+                        criaOptionParaSelect(selectEstado, e.nome, e.id);
+                    })
+                }
+            } catch (error) {
+                console.error('Erro ao carregar cidades:', error);
+            }
+        }
+
+        async function criaCidades() {
+            selectCidade.innerHTML = '';
+            const selectedOption = selectEstado.options[selectEstado.selectedIndex];
+            try {
+                const cidades = await apiCidadesPorEstado(selectedOption.id);
+                if (cidades) {
+                    cidades.forEach(c => {
+                        criaOptionParaSelect(selectCidade, c.nome);
+                    });
+                }
+            } catch (error) {
+                console.error('Erro ao carregar cidades:', error);
+            }
+        }
+
+
+        function criaOptionParaSelect(select, labelOption, idOption = null) {
+            const option = document.createElement('option');
+            option.textContent = labelOption;
+            option.value = labelOption;
+            if (idOption) {
+                option.id = idOption;
+            }
+            select.appendChild(option);
+        }
+
+        async function apiEstados() {
+            try {
+                const url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome';
+                const response = await axios.get(url);
+                const dados = response.data;
+                return dados.map((item) => {
+                    return {
+                        id: item.id,
+                        nome: item.nome,
+                    }
+                })
+            } catch (error) {
+                console.error('Erro ao buscar estados:', error);
+                return false;
+            }
+        }
+
+        async function apiCidadesPorEstado(estadoId) {
+            try {
+                const url = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${estadoId}/municipios`;
+                const response = await axios.get(url);
+                const dados = response.data;
+
+                return dados.map((item) => {
+                    return {
+                        id: item.id,
+                        nome: item.nome,
+                    }
+                })
+            } catch (error) {
+                console.error('Erro ao buscar cidades:', error);
+                return false;
+            }
+        }
+    </script>
+</body>
+
+</html>
+">
+  
+  </iframe>
