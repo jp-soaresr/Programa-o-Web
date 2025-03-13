@@ -6,16 +6,16 @@
   srcdoc="
 
 <!DOCTYPE html>
-<html lang='pt-BR' data-theme='light'>
+<html lang=&quot;pt-BR&quot; data-theme=&quot;light&quot;>
 
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta charset=&quot;UTF-8&quot;>
+    <meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;>
     <title>Formulario</title>
-    <link rel='stylesheet' href='/src/css/style.css'>
-    <script src='https://unpkg.com/imask'></script>
-    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css'>
-    <script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
+    <link rel=&quot;stylesheet&quot; href=&quot;/src/css/style.css&quot;>
+    <script src=&quot;https://unpkg.com/imask&quot;></script>
+    <link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css&quot;>
+    <script src=&quot;https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js&quot;></script>
 </head>
 <style>
     .is-border-danger {
@@ -82,9 +82,9 @@
     }
 </style>
 
-<body class='py-4 has-background-white-ter is-flex is-justify-content-center'>
+<body class=&quot;py-4 has-background-white-ter is-flex is-justify-content-center&quot;>
 
-    <div class='box '>
+    <div class=&quot;box &quot;>
         <div class=&quot;column cabecalho&quot;>
 
             <div class=&quot;is-flex is-justify-content-center gap-6&quot;>
@@ -102,103 +102,103 @@
         </div>
 
 
-        <main class='container is-max-desktop'>
-            <h1 class='title-custom pb-5 '>Parabéns, você concluiu a aula! 🎉 </h1>
-            <p class=' is-size-5 pb-5'>Quer receber mais conteúdos como esse? Preencha seus dados abaixo e fique por
+        <main class=&quot;container is-max-desktop&quot;>
+            <h1 class=&quot;title-custom pb-5 &quot;>Parabéns, você concluiu a aula! 🎉 </h1>
+            <p class=&quot; is-size-5 pb-5&quot;>Quer receber mais conteúdos como esse? Preencha seus dados abaixo e fique por
                 dentro das novidades! 😉 </p>
-            <form action='#' id='formulario-cep' method='POST' aria-labelledby='formulario-cep'
-                class='columns is-multiline'>
-                <div class='column is-12'>
-                    <label class='label is-size-5' for='nome-completo'>Nome Completo<span
-                            class='has-text-danger'>*</span></label>
-                    <div class='control is-expanded'>
-                        <input class='input is-uppercase' maxlength='100' type='text' name='nome-completo'
-                            id='nome-completo' autofocus required aria-label='Nome completo'>
+            <form action=&quot;#&quot; id=&quot;formulario-cep&quot; method=&quot;POST&quot; aria-labelledby=&quot;formulario-cep&quot;
+                class=&quot;columns is-multiline&quot;>
+                <div class=&quot;column is-12&quot;>
+                    <label class=&quot;label is-size-5&quot; for=&quot;nome-completo&quot;>Nome Completo<span
+                            class=&quot;has-text-danger&quot;>*</span></label>
+                    <div class=&quot;control is-expanded&quot;>
+                        <input class=&quot;input is-uppercase&quot; maxlength=&quot;100&quot; type=&quot;text&quot; name=&quot;nome-completo&quot;
+                            id=&quot;nome-completo&quot; autofocus required aria-label=&quot;Nome completo&quot;>
                     </div>
                 </div>
 
-                <div class='column is-12'>
-                    <label class='label is-size-5' for='email'>E-mail <span class='has-text-danger'>*</span></label>
-                    <div class='control is-expanded'>
-                        <input class='input' type='email' name='email' id='email' required aria-label='E-mail'>
+                <div class=&quot;column is-12&quot;>
+                    <label class=&quot;label is-size-5&quot; for=&quot;email&quot;>E-mail <span class=&quot;has-text-danger&quot;>*</span></label>
+                    <div class=&quot;control is-expanded&quot;>
+                        <input class=&quot;input&quot; type=&quot;email&quot; name=&quot;email&quot; id=&quot;email&quot; required aria-label=&quot;E-mail&quot;>
                     </div>
                 </div>
 
-                <div class='column is-12'>
-                    <label class='label is-size-5' for='whatsapp'>WhatsApp <span
-                            class='has-text-danger'>*</span></label>
-                    <div class='control is-expanded'>
-                        <input class='input' type='text' name='whatsapp' id='whatsapp' required aria-label='WhatsApp'>
+                <div class=&quot;column is-12&quot;>
+                    <label class=&quot;label is-size-5&quot; for=&quot;whatsapp&quot;>WhatsApp <span
+                            class=&quot;has-text-danger&quot;>*</span></label>
+                    <div class=&quot;control is-expanded&quot;>
+                        <input class=&quot;input&quot; type=&quot;text&quot; name=&quot;whatsapp&quot; id=&quot;whatsapp&quot; required aria-label=&quot;WhatsApp&quot;>
                     </div>
                 </div>
 
-                <div class='column is-12'>
-                    <label class='label is-size-5' for='profissao'>Profissão <span
-                            class='has-text-danger'>*</span></label>
-                    <div class='control is-expanded'>
-                        <input class='input is-uppercase' type='text' maxlength='100' name='profissao' id='profissao'
-                            required aria-label='Profissão '>
+                <div class=&quot;column is-12&quot;>
+                    <label class=&quot;label is-size-5&quot; for=&quot;profissao&quot;>Profissão <span
+                            class=&quot;has-text-danger&quot;>*</span></label>
+                    <div class=&quot;control is-expanded&quot;>
+                        <input class=&quot;input is-uppercase&quot; type=&quot;text&quot; maxlength=&quot;100&quot; name=&quot;profissao&quot; id=&quot;profissao&quot;
+                            required aria-label=&quot;Profissão &quot;>
                     </div>
                 </div>
 
 
 
-                <div class='column is-6-widescreen is-6-desktop is-6-tablet is-12-mobile'>
-                    <label class='label is-size-5' for='estado'>Estado <span class='has-text-danger'>*</span></label>
-                    <div class='control'>
-                        <div class='select is-fullwidth'>
-                            <select name='estado' id='estado' required aria-label='Selecione o estado'>
-                                <option value='' selected>Selecione</option>
+                <div class=&quot;column is-6-widescreen is-6-desktop is-6-tablet is-12-mobile&quot;>
+                    <label class=&quot;label is-size-5&quot; for=&quot;estado&quot;>Estado <span class=&quot;has-text-danger&quot;>*</span></label>
+                    <div class=&quot;control&quot;>
+                        <div class=&quot;select is-fullwidth&quot;>
+                            <select name=&quot;estado&quot; id=&quot;estado&quot; required aria-label=&quot;Selecione o estado&quot;>
+                                <option value=&quot;&quot; selected>Selecione</option>
                             </select>
                         </div>
                     </div>
                 </div>
 
-                <div class='column is-6-widescreen is-6-desktop is-6-tablet is-12-mobile'>
-                    <label class='label is-size-5' for='cidade'>Cidade <span class='has-text-danger'>*</span></label>
-                    <div class='control'>
-                        <div class='select is-fullwidth'>
-                            <select name='cidade' id='cidade' required aria-label='Selecione a cidade'>
-                                <option value=''>Selecione</option>
+                <div class=&quot;column is-6-widescreen is-6-desktop is-6-tablet is-12-mobile&quot;>
+                    <label class=&quot;label is-size-5&quot; for=&quot;cidade&quot;>Cidade <span class=&quot;has-text-danger&quot;>*</span></label>
+                    <div class=&quot;control&quot;>
+                        <div class=&quot;select is-fullwidth&quot;>
+                            <select name=&quot;cidade&quot; id=&quot;cidade&quot; required aria-label=&quot;Selecione a cidade&quot;>
+                                <option value=&quot;&quot;>Selecione</option>
                             </select>
                         </div>
                     </div>
                 </div>
 
-                <div class='column mt-4 is-12'>
-                    <button id='btn-enviar' type='submit'
-                        class='column is-12 is-12-mobile is-link button is-size-4 has-text-white'
-                        aria-label='Enviar formulário'>
+                <div class=&quot;column mt-4 is-12&quot;>
+                    <button id=&quot;btn-enviar&quot; type=&quot;submit&quot;
+                        class=&quot;column is-12 is-12-mobile is-link button is-size-4 has-text-white&quot;
+                        aria-label=&quot;Enviar formulário&quot;>
                         Enviar
                     </button>
                 </div>
             </form>
         </main>
     </div>
-    <script type='text/javascript'>
+    <script type=&quot;text/javascript&quot;>
         var __ss_noform = __ss_noform || [];
-        __ss_noform.push(['baseURI', 'https://app-3SI74COZ2S.marketingautomation.services/webforms/receivePostback/MzY0Mje0MDY2AwA/']);
-        __ss_noform.push(['endpoint', 'd5c382e1-c615-4d4e-9c13-5b5b2c453163']);
+        __ss_noform.push([&quot;baseURI&quot;, &quot;https://app-3SI74COZ2S.marketingautomation.services/webforms/receivePostback/MzY0Mje0MDY2AwA/&quot;]);
+        __ss_noform.push([&quot;endpoint&quot;, &quot;d5c382e1-c615-4d4e-9c13-5b5b2c453163&quot;]);
     </script>
-    <script type='text/javascript'
-        src='https://koi-3SI74COZ2S.marketingautomation.services/client/noform.js?ver=1.24'></script>
+    <script type=&quot;text/javascript&quot;
+        src=&quot;https://koi-3SI74COZ2S.marketingautomation.services/client/noform.js?ver=1.24&quot;></script>
     <script>
-        const selectEstado = document.getElementById('estado');
-        const selectCidade = document.getElementById('cidade');
-        const inputEmail = document.getElementById('email');
-        const inputNome = document.getElementById('nome-completo');
-        const inputProfissao = document.getElementById('profissao');
-        const inputWhatsapp = document.getElementById('whatsapp');
-        const btn = document.getElementById('btn-enviar');
-        const formulario = document.getElementById('formulario-cep');
+        const selectEstado = document.getElementById(&quot;estado&quot;);
+        const selectCidade = document.getElementById(&quot;cidade&quot;);
+        const inputEmail = document.getElementById(&quot;email&quot;);
+        const inputNome = document.getElementById(&quot;nome-completo&quot;);
+        const inputProfissao = document.getElementById(&quot;profissao&quot;);
+        const inputWhatsapp = document.getElementById(&quot;whatsapp&quot;);
+        const btn = document.getElementById(&quot;btn-enviar&quot;);
+        const formulario = document.getElementById(&quot;formulario-cep&quot;);
 
-        document.addEventListener('DOMContentLoaded', async () => {
+        document.addEventListener(&quot;DOMContentLoaded&quot;, async () => {
             try {
                 mascarasEValidacoes();
                 eventoEnviarFormulario();
                 await main()
             } catch (error) {
-                console.error('Houve um erro: ', error);
+                console.error(&quot;Houve um erro: &quot;, error);
             }
         });
 
@@ -210,7 +210,7 @@
         }
 
         function eventoEnviarFormulario() {
-            btn.addEventListener('click', async (e) => {
+            btn.addEventListener(&quot;click&quot;, async (e) => {
                 e.preventDefault();
                 if (!formulario.checkValidity()) {
                     formulario.reportValidity();
@@ -218,7 +218,7 @@
                 if (!verificaCamposObrigatorios()) {
                     return;
                 }
-                const eventoSubmit = new Event('submit', {
+                const eventoSubmit = new Event(&quot;submit&quot;, {
                     bubbles: true,
                     cancelable: true,
                 });
@@ -237,8 +237,8 @@
                 selectCidade,
             ];
             for (const campo of campos) {
-                if (campo.value.trim() === '') {
-                    campo.classList.add('is-danger');
+                if (campo.value.trim() === &quot;&quot;) {
+                    campo.classList.add(&quot;is-danger&quot;);
                     return false;
                 }
             }
@@ -248,63 +248,63 @@
 
         function mascarasEValidacoes() {
 
-            inputEmail.addEventListener('input', () => {
+            inputEmail.addEventListener(&quot;input&quot;, () => {
                 if (inputEmail.validity.valid) {
-                    inputEmail.classList.remove('is-danger');
-                    inputEmail.classList.add('is-success');
+                    inputEmail.classList.remove(&quot;is-danger&quot;);
+                    inputEmail.classList.add(&quot;is-success&quot;);
                 } else {
-                    inputEmail.classList.remove('is-success');
-                    inputEmail.classList.add('is-danger');
+                    inputEmail.classList.remove(&quot;is-success&quot;);
+                    inputEmail.classList.add(&quot;is-danger&quot;);
                 }
             });
 
             const whatsappMask = IMask(inputWhatsapp, {
-                mask: '(00) 00000-0000'
+                mask: &quot;(00) 00000-0000&quot;
             });
-            inputWhatsapp.addEventListener('input', () => {
+            inputWhatsapp.addEventListener(&quot;input&quot;, () => {
                 if (whatsappMask.masked.isComplete) {
-                    inputWhatsapp.classList.remove('is-danger');
-                    inputWhatsapp.classList.add('is-success');
+                    inputWhatsapp.classList.remove(&quot;is-danger&quot;);
+                    inputWhatsapp.classList.add(&quot;is-success&quot;);
                 } else {
-                    inputWhatsapp.classList.remove('is-success');
-                    inputWhatsapp.classList.add('is-danger');
+                    inputWhatsapp.classList.remove(&quot;is-success&quot;);
+                    inputWhatsapp.classList.add(&quot;is-danger&quot;);
                 }
             });
 
-            inputProfissao.addEventListener('input', () => {
+            inputProfissao.addEventListener(&quot;input&quot;, () => {
                 const value = inputProfissao.value.trim();
                 const wordCount = value.split(/\s+/).filter(Boolean).length;
                 if (wordCount >= 1 && value.length <= 100) {
-                    inputProfissao.classList.remove('is-danger');
-                    inputProfissao.classList.add('is-success');
+                    inputProfissao.classList.remove(&quot;is-danger&quot;);
+                    inputProfissao.classList.add(&quot;is-success&quot;);
                 } else {
-                    inputProfissao.classList.remove('is-success');
-                    inputProfissao.classList.add('is-danger');
+                    inputProfissao.classList.remove(&quot;is-success&quot;);
+                    inputProfissao.classList.add(&quot;is-danger&quot;);
                 }
             });
 
-            inputNome.addEventListener('input', () => {
+            inputNome.addEventListener(&quot;input&quot;, () => {
                 const value = inputNome.value.trim();
                 const wordCount = value.split(/\s+/).filter(Boolean).length;
                 if (wordCount >= 2 && value.length <= 100) {
-                    inputNome.classList.remove('is-danger');
-                    inputNome.classList.add('is-success');
+                    inputNome.classList.remove(&quot;is-danger&quot;);
+                    inputNome.classList.add(&quot;is-success&quot;);
                 } else {
-                    inputNome.classList.remove('is-success');
-                    inputNome.classList.add('is-danger');
+                    inputNome.classList.remove(&quot;is-success&quot;);
+                    inputNome.classList.add(&quot;is-danger&quot;);
                 }
             });
         }
 
         async function adicionarEventoMudancaEstado() {
-            selectEstado.addEventListener('change', async (e) => {
+            selectEstado.addEventListener(&quot;change&quot;, async (e) => {
                 e.preventDefault();
                 await criaCidades();
             });
         }
 
         async function criaEstados() {
-            selectEstado.innerHTML = '';
+            selectEstado.innerHTML = &quot;&quot;;
             try {
                 const estados = await apiEstados();
                 if (estados) {
@@ -313,12 +313,12 @@
                     })
                 }
             } catch (error) {
-                console.error('Erro ao carregar cidades:', error);
+                console.error(&quot;Erro ao carregar cidades:&quot;, error);
             }
         }
 
         async function criaCidades() {
-            selectCidade.innerHTML = '';
+            selectCidade.innerHTML = &quot;&quot;;
             const selectedOption = selectEstado.options[selectEstado.selectedIndex];
             try {
                 const cidades = await apiCidadesPorEstado(selectedOption.id);
@@ -328,13 +328,13 @@
                     });
                 }
             } catch (error) {
-                console.error('Erro ao carregar cidades:', error);
+                console.error(&quot;Erro ao carregar cidades:&quot;, error);
             }
         }
 
 
         function criaOptionParaSelect(select, labelOption, idOption = null) {
-            const option = document.createElement('option');
+            const option = document.createElement(&quot;option&quot;);
             option.textContent = labelOption;
             option.value = labelOption;
             if (idOption) {
@@ -345,7 +345,7 @@
 
         async function apiEstados() {
             try {
-                const url = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome';
+                const url = &quot;https://servicodados.ibge.gov.br/api/v1/localidades/estados?orderBy=nome&quot;;
                 const response = await axios.get(url);
                 const dados = response.data;
                 return dados.map((item) => {
@@ -355,7 +355,7 @@
                     }
                 })
             } catch (error) {
-                console.error('Erro ao buscar estados:', error);
+                console.error(&quot;Erro ao buscar estados:&quot;, error);
                 return false;
             }
         }
@@ -373,7 +373,7 @@
                     }
                 })
             } catch (error) {
-                console.error('Erro ao buscar cidades:', error);
+                console.error(&quot;Erro ao buscar cidades:&quot;, error);
                 return false;
             }
         }
